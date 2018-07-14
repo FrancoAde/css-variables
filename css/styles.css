@@ -1,0 +1,28 @@
+/*
+    --variable : value
+    selector: var(--variable)
+*/
+
+/*
+    ->  las variables se declaran en el elemento de mas alto nivel,
+        html, pero es conveniente declararlas en :root.
+
+    ->  Scope de DOOM, del padre a los nodos hijos
+*/
+
+:root{
+    --color: purple;
+    --link-color: orange;
+    --bg-color: yellow;
+}
+
+a{
+    color: var(--link-color)
+}
+h1{
+    color: var(--color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html{
+    background: var(--bg-color);
+}

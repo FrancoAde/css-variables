@@ -1,0 +1,38 @@
+/*
+*  Para tamaños de texto y columna
+*/
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --font-size: 2em;
+    --colum-size: 100%;
+}
+
+h1{
+    font-size: var(--font-size);
+    text-align: center;
+    transition: .2s all;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column{
+    width: var(--column-size);
+}
+@media screen and (min-width: 1024px){
+    h1{
+        --font-size: 5em;
+    }
+
+    .column{
+        --column-size: 33%;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
